@@ -1,18 +1,20 @@
 #!/usr/bin/env python
 """Spoj.com - Die Hard (Accepted)
 
-You initially have ‘H’ amount of health and ‘A’ amount of armour. At any
-instant you can live in any of the three places - fire, water and air. After
-every unit time, you have to change your place of living.
+Your initially have H amount of health and A amount of armour. At any one time
+you can live in one of 3 places: fire, water and air. After every unit of time
+you must change your place of living.
 
-If you step into air, your health increases by 3 and your armour increases by 2
-If you step into water, your health decreases by 5 and your armour decreases by 10
-If you step into fire, your health decreases by 20 and your armour increases by 5
+If you step into:
+    - air, your health increases by 3 and your armour increases by 2
+    - water, your health decreases by 5 and your armour decreases by 10
+    - fire, your health decreases by 20 and your armour increases by 5
 
-If your health or armour becomes <=0, you will die instantly.
+If your health reaches zero or less, you will die instantly.
 
 Find the maximum time you can survive.
 """
+
 from sys import stdin
 
 
@@ -80,7 +82,6 @@ class Fire(Location):
     def take_effect(self):
         self.player.health -= 20
         self.player.armour += 5
-
 
 
 if __name__ == '__main__':
