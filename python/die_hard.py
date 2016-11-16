@@ -77,7 +77,7 @@ class Water(Location):
 
 
 class Fire(Location):
-    """Halth -20, armour +5"""
+    """Health -20, armour +5"""
 
     def take_effect(self):
         self.player.health -= 20
